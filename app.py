@@ -20,7 +20,7 @@ stream = client.chat.completions.create(
             "role": "user",
             "content": prompt_template.format(url="https://www.magicaiprompts.com/docs/rag/vector-stores-llm-performance-improvement")
             # "content": """
-            #     아래 사이트를 정확히 분석해서 메타 정보의 제목과 설명, 메타 정보의 이미지 url을 알려주세요. 없는 정보를 만들어내지 마세요.
+            #     아래 url의 정보를 요약해주세요.
             #
             #     https://www.magicaiprompts.com/docs/rag/vector-stores-llm-performance-improvement
             # """

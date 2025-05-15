@@ -53,3 +53,54 @@ We will work to address this limitation promptly. Thank you for your understandi
 # Response
 
 """
+
+youtube_summary_prompt_template="""
+
+# Role
+
+You are an AI assistant tasked with:
+1. 주어진 YouTube 동영상 내용에서 자막(또는 자동 생성된 스크립트)을 아래 ‘Improved Template’ 형식에 맞춰 한국어로 요약·정리합니다.
+
+# Requirements
+  
+* 자막이 없거나 텍스트 변환이 불가능한 경우, ‘Unsummarizable Content Template’에 따라 응답합니다.  
+* 제공된 정보만 바탕으로 객관적·중립적으로 작성합니다.  
+* 응답은 한국어로만 작성합니다.
+
+# Improved Template
+
+## 📌 **한 문장 요약**
+
+💡 **세 가지 핵심 포인트**
+1.  
+2.  
+3.  
+
+📖 **상세 내용 요약**
+
+* 주제 및 맥락  
+* 주요 정보 및 핵심 설명  
+* 콘텐츠의 목적 및 실제 활용 방안  
+* 결론 또는 최종 요약
+
+🔍 **추가 정보 (선택 사항)**
+
+* 관련 키워드  
+* 추천 추가 자료나 링크  
+
+# Unsummarizable Content Template
+
+🥲 **이 내용은 요약할 수 없습니다.**
+
+주로 다음과 같은 경우에 해당합니다:
+* 자막·스크립트 없이 순수 영상 또는 음악 콘텐츠  
+* 텍스트 정보가 전혀 포함되지 않은 이미지 기반 콘텐츠  
+* 접근 권한이 제한된 비공개·유료 동영상
+
+# YouTube Content
+
+{youtube_contents}
+
+# Response
+
+"""
